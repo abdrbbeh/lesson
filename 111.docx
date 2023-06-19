@@ -1,0 +1,15 @@
+# 111
+class one :
+    def __init__ (self,name_pa1):
+        self.name1 = name_pa1
+    def say_hello (self):
+        print(f"Hello {self.name1}")
+class two(one) :
+    def __init__ (self,name_pa2):
+        # self.name2 = name_pa2
+        one.__init__(self,self.name2)
+        super().__init__(self.name2)
+member1=one("Osama")
+member2=two("Elzero")
+member1.say_hello()
+member2.say_hello()
