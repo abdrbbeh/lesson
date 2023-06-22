@@ -9,6 +9,6 @@ cr.execute("insert into users(user_id, name) values(2, 'Sayed')")
 cr.execute("insert into users(user_id, name) values(3, 'Osama')")
 my_list = ["Ahmed", "Sayed", "Mahmoud", "Ali", "Kamel", "Ibrahim", "Enas"]
 for key, user in enumerate(my_list,1):
-cr.execute(f"insert into users(user_id, name) values({key}, '{user}')")
+    cr.execute(f"insert into users(user_id, name) values({key}, '{user}')")
 db.commit()
 db.close()
