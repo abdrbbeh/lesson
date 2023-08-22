@@ -36,3 +36,22 @@ SHOW CREATE TABLE `Table_Name`;
 DROP TABLE `Table_Name`;
 DROP TABLE IF EXISTS `Table_Name`;
 CREATE TABLE IF NOT EXISTS `Table_Name`; ( `Column_Name` DataType(Length),...);
+
+# 10
+RENAME TABLE `Table_Name` TO `Table_Name`...;
+ALTER TABLE `Table_Name` ENGINE = MYISAM;
+
+# 11
+ALTER TABLE `Table_Name` ADD `Column_Name` DataType(Length);
+ALTER TABLE `Table_Name` ADD `Column_Name` DataType(Length) AFTER `Column_Name`;
+ALTER TABLE `Table_Name` ADD `Column_Name` DataType(Length) FIRST;
+ALTER TABLE `Table_Name` DROP `Column_Name`;
+ALTER TABLE `Table_Name` CHANGE `Column_Name` `Column_Name`  DataType(Length) AFTER `Column_Name`;
+ALTER TABLE `Table_Name` CHANGE `Column_Name` `Column_Name`  DataType(Length) FIRST;
+ALTER TABLE `Table_Name` MODIFY `Column_Name`  DataType(Length);
+
+# 12
+ALTER TABLE `Table_Name` RENAME `Table_Name`;
+ALTER TABLE `Table_Name` MODIFY `Column_Name`  DataType(Length), 
+CHANGE `Column_Name` `Column_Name`  DataType(Length);
+ALTER TABLE `Table_Name` CONVERT TO CHARCTER SET utf8;
