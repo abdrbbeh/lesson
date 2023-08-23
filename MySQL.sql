@@ -55,3 +55,21 @@ ALTER TABLE `Table_Name` RENAME `Table_Name`;
 ALTER TABLE `Table_Name` MODIFY `Column_Name`  DataType(Length), 
 CHANGE `Column_Name` `Column_Name`  DataType(Length);
 ALTER TABLE `Table_Name` CONVERT TO CHARCTER SET utf8;
+
+# 13
+ALTER TABLE `Table_Name` MODIFY `Column_Name`  DataType(Length) NOT NULL;
+ALTER TABLE `Table_Name` ADD `Column_Name` DataType(Length) NOT NULL;
+
+# 14
+ALTER TABLE `Table_Name` ADD UNIQUE(`Column_Name`);
+ALTER TABLE `Table_Name` DROP INDEX `Column_Name`;
+ALTER TABLE `Table_Name` ADD `Column_Name` DataType(Length) NOT NULL UNIQUE;
+
+# 15
+PRIMARY KEY
+CREATE TABLE `Table_Name` ( `Column_Name` DataType(Length) PRIMARY KEY);
+CREATE TABLE `Table_Name` ( `Column_Name` DataType(Length) PRIMARY KEY (`Column_Name`));
+ALTER TABLE `Table_Name` ADD PRIMARY KEY(`Column_Name`); 
+ALTER TABLE `Table_Name` DROP PRIMARY KEY;
+ALTER TABLE `Table_Name` DROP PRIMARY KEY (`Column_Name`);
+SHOW INDEXES FROM `Table_Name`;
