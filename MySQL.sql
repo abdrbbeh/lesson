@@ -14,7 +14,6 @@ INSERT INTO `Database_Name`.`Table_Name` (`Column_Name) VALUES ( CURRENT_TIMESTA
 
 # 07
 ENUM(Value,...)
-UPDATE `Database_Name`.`Table_Name` SET `Column_Name`,... = Value,... WHERE Condition;
 SET(Value,...)
 INSERT INTO `Database_Name`.`Table_Name` (`Column_Name`,...) VALUES ('Value,...');
 
@@ -73,3 +72,16 @@ ALTER TABLE `Table_Name` ADD PRIMARY KEY(`Column_Name`);
 ALTER TABLE `Table_Name` DROP PRIMARY KEY;
 ALTER TABLE `Table_Name` DROP PRIMARY KEY (`Column_Name`);
 SHOW INDEXES FROM `Table_Name`;
+
+# 16 
+CREATE TABLE `Table_Name` ( `Column_Name` DataType(Length), CONSTRAINT `Constraint_Name` FOREIGN KEY(`Column_Name`) REFERENCES `Table_Name`(`Column_Name`) ON UPDATE CASCADE ON DELETE CASCADE) ENGINE = INNODB;
+ALTER TABLE `Table_Name` ADD CONSTRAINT `Constraint_Name` FOREIGN KEY(`Column_Name`) REFERENCES `Table_Name`(`Column_Name`) ON UPDATE CASCADE ON DELETE CASCADE;
+
+# 17
+SELECT * FROM `Table_Name` JOIN `Table_Name` ON Condition WHERE Condition;
+UPDATE `Database_Name`.`Table_Name` SET `Column_Name`,... = Value,... WHERE Condition;
+DELET FROM `Table_Name` WHERE Condition;
+
+# 18
+ALTER TABLE `Table_Name` DROP FOREIGN KEY `Constraint_Name`;
+ON UPDATE (CASCADE, SET NULL, NO ACTION, RESTRICT)
