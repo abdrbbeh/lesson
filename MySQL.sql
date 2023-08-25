@@ -1,5 +1,5 @@
 # 02
-mysql -u root -p
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
 
 # 03
 SELECT `Column_Name`,... FROM `Table_Name`,... WHERE `Column_Name` = Value AND `Column_Name` = Value ORDER BY `Column_Name`,... LIMIT number;
