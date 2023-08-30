@@ -85,3 +85,15 @@ DELET FROM `Table_Name` WHERE Condition;
 # 18
 ALTER TABLE `Table_Name` DROP FOREIGN KEY `Constraint_Name`;
 ON UPDATE (CASCADE, SET NULL, NO ACTION, RESTRICT)
+
+# 37
+expr BETWEEN min AND max
+expr NOT BETWEEN min AND max
+
+# 38
+expr IN (value,...)
+expr NOT IN (value,...)
+
+# 39
+expr LIKE pat [ESCAPE 'escape_char']
+expr NOT LIKE pat [ESCAPE 'escape_char']
