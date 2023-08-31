@@ -97,3 +97,58 @@ expr NOT IN (value,...)
 # 39
 expr LIKE pat [ESCAPE 'escape_char']
 expr NOT LIKE pat [ESCAPE 'escape_char']
+
+# 42
+IF(expr1,expr2,expr3)
+
+# 43 
+CASE 
+WHEN condition THEN result 
+[WHEN condition THEN result ...] 
+[ELSE result] 
+END
+CASE value 
+WHEN compare_value THEN result 
+[WHEN compare_value THEN result ...] 
+[ELSE result] 
+END
+
+# 45
+SELECT USER();
+SELECT SESSION_USER();
+SELECT SYSTEM_USER();
+
+SELECT VERSION();
+
+SELECT CHARSET(str);
+SELECT CONVERT(expr USING transcoding_name)
+
+SELECT DATABASE();
+
+SELECT CONNECTION_ID();
+# 46
+SELECT * FROM `Table_Name` ORDER BY `Column_Name`;
+
+SELECT * FROM `Table_Name` ORDER BY `Column_Name`, `Column_Name`;
+
+SELECT * FROM `Table_Name` GROUP BY `Column_Name`;
+
+SELECT `Column_Name`, SUM(`Column_Name`) FROM `Table_Name` GROUP BY `Column_Name`;
+
+SELECT `Column_Name`, SUM(`Column_Name`) FROM `Table_Name` GROUP BY `Column_Name` ORDER BY `Column_Name` DESC;
+
+SELECT ` Column_Name`, COUNT(`Column_Name`) `alias` FROM `Table_Name` GROUP BY `Column_Name` ORDER BY `Column_Name`;
+
+SELECT `Column_Name`, COUNT(`Column_Name`) `alias` FROM `Table_Name` GROUP BY `Column_Name` HAVING `alias` > 1;
+
+# 48
+SELECT * FROM `Table_Name`, `Table_Name` WHERE `Table_Name`.`Column_Name` = `Table_Name`.`Column_Name`;
+
+# 49
+SELECT `alias`.`Column_Name`, `alias`.`Column_Name`, `alias`.`Column_Name` FROM `Table_Name` `alias` INNER JOIN `Table_Name` `alias` ON `alias`.`Column_Name` = `alias`.`Column_Name`;
+
+# 50
+SELECT `alias`.`Column_Name`, `alias`.`Column_Name`, `alias`.`Column_Name` FROM `Table_Name` `alias` LEFT JOIN `Table_Name` `alias` ON `alias`.`Column_Name` = `alias`.`Column_Name`;
+SELECT `alias`.`Column_Name`, `alias`.`Column_Name`, `alias`.`Column_Name` FROM `Table_Name` `alias` RIGHT JOIN `Table_Name` `alias` ON `alias`.`Column_Name` = `alias`.`Column_Name`;
+
+2023/08/31 06:36
